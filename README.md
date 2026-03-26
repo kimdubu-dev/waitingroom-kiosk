@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# WaitingRoom Kiosk 🛫
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+공항 푸드코트를 위한 대기열 관리 시스템 - 프론트엔드
 
-## Available Scripts
+## 프로젝트 소개
 
-In the project directory, you can run:
+인천공항 면세구역 푸드코트 근무 경험에서 출발한 프로젝트입니다.
+외국인 손님이 많은 공항 특성상 카카오 기반 대기 서비스는 한계가 있어,
+국가코드에 따라 카카오 알림톡과 국제 SMS를 자동 분기하는 시스템을 직접 구현했습니다.
 
-### `npm start`
+## 주요 기능
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 업장별 실시간 대기 인원 확인
+- 국가 선택 + 전화번호 입력으로 대기 등록
+- 순번 발급 및 문자 알림
+- 직원용 대시보드 (호출 / 착석 / 취소 처리)
+- 5초마다 자동 갱신
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 기술 스택
 
-### `npm test`
+- React
+- React Router DOM
+- Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 백엔드 레포
 
-### `npm run build`
+👉 [waitingroom-api](https://github.com/kimdubu-dev/waitingroom-api)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 실행 방법
+```bash
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+백엔드 서버(`http://localhost:8000`)가 실행 중이어야 합니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 화면 구성
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+| 화면 | 설명 |
+|------|------|
+| `/` | 업장 목록 + 대기 인원 |
+| `/waiting` | 인원 / 국가 / 전화번호 입력 |
+| `/complete` | 순번 발급 완료 |
+| `/dashboard` | 직원용 대기 관리 |
